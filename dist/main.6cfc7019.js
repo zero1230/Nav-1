@@ -173,16 +173,18 @@ window.onbeforeunload = function () {
   localStorage.setItem('x', string);
 };
 
+$('.searchInput').on('input', function (e) {
+  e.stopPropagation(); //阻止input输入框的查询内容影响到按键事件
+});
 $(document).on('keypress', function (e) {
-  var key = e.key;
-  console.log(key);
+  var key = e.key; //console.log(key)
 
   for (var i = 0; i < hashMap.length; i++) {
-    if (hashMap[i].logo.toLowerCase() === key) {
+    if (hashMap[i].logo.toLowerCase === key) {
       window.open(hashMap[i].url);
       break;
     }
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.ce5f3d68.js.map
+//# sourceMappingURL=main.6cfc7019.js.map

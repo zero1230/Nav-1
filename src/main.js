@@ -63,14 +63,18 @@ window.onbeforeunload=()=>{
     const string=JSON.stringify(hashMap)
     localStorage.setItem('x',string)
     
-    
 }
+
+$('.searchInput').on('input',(e)=>{
+    e.stopPropagation()//阻止input输入框的查询内容影响到按键事件
+})
+
 
 $(document).on('keypress',(e)=>{
     let {key}=e
-    console.log(key)
+    //console.log(key)
     for(let i=0;i<hashMap.length;i++){
-        if (hashMap[i].logo.toLowerCase()===key){
+        if (hashMap[i].logo.toLowerCase===key){
             window.open(hashMap[i].url)
             break
         }
