@@ -1,0 +1,157 @@
+/* css reset */
+*{box-sizing: border-box;}
+*:before,*:after{box-sizing: border-box;}
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* style */
+body{background: #eee;}
+.globalHeader{   
+    margin: 20px; 
+}
+
+
+
+.serarchForm{
+    display: flex;
+    justify-content: space-between;
+}
+@media(min-width:500px){
+    .serarchForm{
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+.serarchForm > input{
+    width: 100%;
+    margin-right: 10px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.serarchForm > button{
+    white-space: nowrap;
+    padding: 0 28px;
+    border: none;
+    border-radius:4px ;
+    background: #0282B9;
+    color: white;
+    font-size: 16px;
+}
+
+.globalMain{
+   max-width: 900px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top:60px ;
+}
+
+.siteList{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+@media(min-width:500px){
+    .siteList{
+    margin-right: -28px;
+    margin-left: 0;
+    justify-content: flex-start;
+
+    }
+   
+}
+.siteList > li{
+    margin-bottom:10px ;  
+}
+
+@media(min-width:500px){
+    .siteList >li{
+        margin-right:25px;
+    }
+    
+}
+.siteList .site{
+   
+   width: 160px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column; 
+   background: white;
+   border: 1px solid #ddd;
+   border-radius:4px ;
+   padding: 20px 0;
+   position: relative;
+   cursor: pointer;
+   
+}
+.siteList .site .logo{
+    
+    width: 64px;
+    height: 64px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
+.siteList .site .link{
+    font-size: 12px;
+}
+
+.siteList .site .close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    cursor: default;
+    display: none;
+}
+
+.siteList .site:hover .close {
+    display: block;
+}
+.siteList .addButton{
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: white;
+    height: 122px;
+    
+}
+
+.siteList .icon-wrapper{
+    height: 64px;
+    width: 64px;
+}
+
+.siteList .icon-wrapper .icon{
+    width: 56px;
+    height: 56px;
+    
+}
+
+.siteList .text{
+    font-size: 16px;
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+
+
+/*# sourceMappingURL=style.614eb866.css.map */
